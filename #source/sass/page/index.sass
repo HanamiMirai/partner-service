@@ -1,0 +1,364 @@
+//! font-family: 'Montserrat'
+//! font-family: 'Noto Sans'
+//! font-family: 'Source Sans Pro'
+@import ../add/var.sass
+@import ../add/mixin.sass
+@import ../add/pattern.sass
+
+//* HEADER
+
+.burger-menu
+    display: none
+
+.nav
+    padding: 30px 0
+    font-family: 'Montserrat'
+    font-weight: bold
+    .nav__list
+        list-style-type: none
+        display: flex
+        justify-content: space-around
+        .nav__list-link
+            text-decoration: none
+            text-transform: uppercase
+            font-size: 18px
+            color: #000
+            &:hover
+                color: #ffbb3e
+                transition: all .2s ease
+            
+.info
+    background-image: url(../../img/header/headerbg.jpg)
+    background-repeat: no-repeat  
+    background-position: center
+    background-size: cover  
+    font-family: 'Noto Sans'
+    padding: 45px 0
+    .info-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .info__block
+            display: flex
+            flex-direction: column
+            color: #fff
+            &>i
+                color: #ffa500
+                font-size: 18px
+                margin: 10px 0
+                &>a 
+                    color: #fff
+                    font-family: 'Noto Sans'
+                    font-weight: normal
+                    margin-left: 8px
+                    text-decoration: none
+                .mail-none 
+                    pointer-events: none
+            
+        .info__btn
+            display: block
+            .info__btn-link 
+                @include btn(15px, #fff, normal, #ffa500, 9px 35px,#ffa500,  19px)
+                &:hover
+                    color: $colorOrang
+                    background: none
+                    transition: all .2s ease   
+                     
+.list
+    background: #FAFAFA
+    padding-top: 30px
+    padding-bottom: 30px
+    .list__main
+        display: flex
+        justify-content: space-between
+        .list__main-link
+            text-align: center
+            text-decoration: none
+            color: #000
+            display: flex
+            flex-direction: column
+            align-items: center
+            &>p
+                font-size: 12px
+                font-family: 'Source Sans Pro'
+
+//* MAIN
+#main
+    @include padding(120px, 139px, url(../../../img/index/bgmaim.jpg))
+    .main__content
+        text-align: center
+        color: #fff
+        .main__content-title
+            margin-bottom: 55px
+            font-family: 'Noto Sans'
+            font-size: 45px
+            font-weight: normal
+            &>span
+                color: #febb3f
+        .main__list 
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-bottom: 110px
+            .main__list-items
+                font-family: 'Source Sans Pro'
+                &:nth-child(2)
+                    margin: 0 100px
+                .list-text
+                    font-size: 16px
+                    line-height: 1
+                    margin-top: 20px
+        .main__content-btn
+            @include btn(20px, #fff, normal, #ffa500, 17px 40px,#ffa500,  20px)
+            font-family: 'Source Sans Pro'
+            font-weight: normal
+            &:hover
+                color: $colorOrang
+                background: none
+                transition: all .2s ease            
+
+//* MONEY         
+#money
+    @include padding(115px, 100px, url(../../../img/index/moneybg.jpg))
+    font-family: 'Noto Sans'
+    .money__title
+        text-align: left
+        .money__title-h
+            @extend %title
+        .money__title-text
+            font-size: 19px
+            color: $colorOrang
+            margin-top: 17px
+    .money__content
+        padding-top: 58px
+        padding-bottom: 40px
+        .money__content-items
+            display: flex
+            align-items: center
+            margin-bottom: 50px
+            &>img
+                width: 80px
+                height: 78px
+                margin-right: 32px
+            .money-text
+                font-size: 20px
+                color: #fff
+                line-height: 1.6
+    
+    .money-btn
+        @include btn(20px, #fff, normal, #1990ff, 20px 70px,#1990ff,  20px)
+        &:hover
+            color: #1990ff
+            background: none
+            transition: all .2s ease
+        
+//* PRICE
+#price
+    @include padding(85px, 90px, url(../../../img/index/pricebg.png))
+    .price__title
+        font-family: 'Noto Sans'
+        margin-bottom: 65px
+        text-align: right
+        .price__title-h
+            @extend %title
+        .price__title-text
+            @extend %titleText
+    .price__content
+        margin-bottom: 90px
+        .price__content-block
+            display: flex
+            flex-direction: row-reverse
+            align-items: center
+            margin-bottom: 40px
+            &>img
+                margin-left: 15px
+            .price-text
+                font-size: 22px
+                color: #fff
+                line-height: 1
+                text-align: right
+    .price__btn
+        display: flex
+        justify-content: flex-end
+        .price__btn-link
+            @include btn(20px, #fff, normal, #11bb59, 20px 30px,#11bb59,  20px)
+            text-align: center
+            &:hover
+                color: #11bb59
+                background: none
+                transition: all .2s ease
+        
+//* PLENKA
+#plenka
+    @include padding(75px, 40px, url(../../../img/index/plenkabg.png))
+    .plenka-title
+        @extend %title
+    .plenka__content
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 60px
+        .plenka__ok
+            font-family: 'Noto Sans'
+            .plenka__item
+                display: flex
+                align-items: flex-start
+                margin-bottom: 40px
+                &>img
+                    width: 80px
+                    height: 60px
+                .plenka__info
+                    margin-left: 23px
+                    .plenka__info-title
+                        font-size: 30px
+                        color: #fff
+                        letter-spacing: 0.36px
+                        margin-bottom: 12px
+                    .plenka__info-text
+                        color: #fff
+                        font-size: 17px
+                        max-width: 470px
+                        line-height: 1.25
+                        letter-spacing: 0.24px
+
+//* WORK
+#work
+    background-color: #182130
+    padding-top: 55px
+    padding-bottom: 80px
+    font-family: 'Noto Sans'
+    .work-title
+        @extend %title
+        text-align: center
+        margin-bottom: 70px
+    .work__content
+        display: flex
+        justify-content: space-between
+        .work__item
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            &>img
+                height: 110px
+            .work__item-title
+                color: #fff
+                font-size: 17px
+                line-height: 1.36
+                letter-spacing: 0.22px
+                margin-top: 30px
+                margin-bottom: 15px
+            .work__item-text
+                color: #DCDCDC
+                font-size: 12px
+                width: 220px
+
+//* FORMA
+#forma
+    @include padding(110px, 70px, url(../../../img/index/plenkabg.png))
+    font-family: 'Noto Sans'
+    .forma__content
+        display: flex
+        justify-content: space-between
+        .forma__info
+            max-width: 580px
+            .forma__info-title
+                color: #fff
+                font-size: 40px
+                line-height: 1.25
+                letter-spacing: 0.48px
+            .forma__info-text
+                color: #febb3f
+                font-size: 20px
+            .forma__items
+                margin-top: 50px
+                .forma__item
+                    display: flex
+                    align-items: flex-start
+                    margin-bottom: 40px
+                    &>img
+                        width: 70px
+                    .forma__text
+                        margin-left: 30px
+                        .forma__text-title
+                            color: #FDBB3D
+                            font-size: 25px
+                            margin-bottom: 10px
+                        .forma__text-info
+                            color: #fff
+                            font-size: 19px
+                            font-stretch: normal
+                            font-style: normal
+                            line-height: 1.25
+                            letter-spacing: normal
+
+        #form
+            display: block
+            .form
+                display: flex
+                flex-direction: column
+                align-items: center
+                background-color: #fff  
+                padding: 35px 30px 50px 30px
+                .form__title
+                    font-size: 25px
+                    font-weight: normal
+                    font-family: 'Noto Sans'
+                    color: #1C1C1C
+                    margin-bottom: 55px
+                .form__item
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    margin-bottom: 30px
+                    .form__item-label
+                        font-family: 'Noto Sans'
+                        font-size: 19px
+                        margin-bottom: 10px
+                        color: #232323
+                    .form__item-input
+                        width: 250px
+                        padding: 15px
+                        background-color: #f0f0f0
+                        outline: none
+                        border: none
+                        &::placeholder 
+                            color: #B6B6B6
+                .form-btn
+                    border: none
+                    background-color: #2db6d8
+                    color: #fff
+                    font-size: 20px
+                    padding: 15px 87px
+                    margin-top: 20px
+                    cursor: pointer   
+    
+//* FOOTER
+#footer
+    background-color: #333333
+    background-image: url(../../img/header/mapfooter.png)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 30px 0
+    font-family: 'Noto Sans'
+    margin-top: auto 
+    .footer__main
+        display: flex
+        justify-content: space-between
+        align-items: center
+        text-align: center
+        .footer-title
+            font-size: 30px
+            color: #DDDDDC
+        .footer__info-tel
+            text-decoration: none
+            font-size: 25px
+            color: #fdfdfb
+            display: flex
+            justify-content: flex-end
+        .footer__info-text 
+            color: #fdfdfb
+            font-size: 13px
+
+  
